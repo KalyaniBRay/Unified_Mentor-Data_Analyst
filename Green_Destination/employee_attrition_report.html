@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Employee Attrition Analysis Report</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               line-height: 1.6;
+               margin: 0;
+               padding: 0;
+               background-color: #f4f4f4;
+          }
+
+          .container {
+               width: 80%;
+               margin: auto;
+               overflow: hidden;
+          }
+
+          header {
+               background: #50b3a2;
+               color: #fff;
+               padding-top: 30px;
+               min-height: 70px;
+               border-bottom: #e8491d 3px solid;
+          }
+
+          header a {
+               color: #fff;
+               text-decoration: none;
+               text-transform: uppercase;
+               font-size: 16px;
+          }
+
+          header ul {
+               padding: 0;
+               list-style: none;
+          }
+
+          header li {
+               display: inline;
+               padding: 0 20px 0 20px;
+          }
+
+          header #branding {
+               float: left;
+          }
+
+          header #branding h1 {
+               margin: 0;
+          }
+
+          header nav {
+               float: right;
+               margin-top: 10px;
+          }
+
+          .content {
+               padding: 20px;
+               background: #fff;
+               margin-top: 20px;
+          }
+
+          .content h2,
+          .content h3 {
+               color: #333;
+          }
+
+          .content p {
+               margin: 10px 0;
+          }
+
+          .content ul {
+               margin: 10px 0;
+               padding: 0;
+               list-style: none;
+          }
+
+          .content ul li {
+               background: #e4e4e4;
+               margin-bottom: 5px;
+               padding: 10px;
+               border-left: #50b3a2 5px solid;
+          }
+
+          footer {
+               background: #333;
+               color: #fff;
+               text-align: center;
+               padding: 10px 0;
+               margin-top: 20px;
+          }
+     </style>
+</head>
+
+<body>
+     <header>
+          <div class="container">
+               <div id="branding">
+                    <h1>Employee Attrition Analysis Report</h1>
+               </div>
+               <nav>
+                    <ul>
+                         <li><a href="#introduction">Introduction</a></li>
+                         <li><a href="#data-collection">Data Collection</a></li>
+                         <li><a href="#eda">EDA</a></li>
+                         <li><a href="#model-evaluation">Model Evaluation</a></li>
+                         <li><a href="#conclusion">Conclusion</a></li>
+                         <li><a href="#recommendations">Recommendations</a></li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+
+     <div class="container">
+          <div class="content">
+               <h2 id="introduction">Introduction</h2>
+               <p>Employee attrition, or turnover, is a critical metric for organizations as it impacts productivity,
+                    morale, and overall business performance. This report aims to analyze the factors contributing to
+                    employee attrition and provide insights to help the company develop strategies to improve employee
+                    retention.</p>
+
+               <h2 id="data-collection">Data Collection</h2>
+               <p>The dataset used for this analysis was sourced from the 'greendestination.csv' file. It contains
+                    various features related to employee demographics, job satisfaction, compensation, and other
+                    relevant attributes.</p>
+
+               <h2 id="eda">Exploratory Data Analysis (EDA)</h2>
+               <p>EDA was conducted to understand the distribution of data, identify missing values, and explore
+                    relationships between different features and attrition.</p>
+               <h3>Key Findings:</h3>
+               <ul>
+                    <li><strong>Attrition Rate:</strong> The overall attrition rate is calculated and displayed, showing
+                         the percentage of employees who left the company.</li>
+                    <li><strong>Attrition due to Age:</strong> Younger employees tend to have higher attrition rates,
+                         indicating that age is a significant factor in employee turnover.</li>
+                    <li><strong>Years at Company vs. Attrition:</strong> Employees with fewer years at the company are
+                         more likely to leave, suggesting that newer employees are at a higher risk of attrition.</li>
+                    <li><strong>Distance from Home vs. Attrition:</strong> Employees living farther from the workplace
+                         tend to have higher attrition rates, highlighting the impact of commute distance on employee
+                         retention.</li>
+                    <li><strong>Job Satisfaction vs. Attrition:</strong> Lower job satisfaction is associated with
+                         higher attrition rates, emphasizing the importance of job satisfaction in retaining employees.
+                    </li>
+                    <li><strong>Monthly Income vs. Attrition:</strong> Employees with lower monthly incomes are more
+                         likely to leave, indicating that compensation plays a crucial role in employee retention.</li>
+                    <li><strong>Years with Current Manager vs. Attrition:</strong> Employees with fewer years with their
+                         current manager tend to have higher attrition rates, suggesting that managerial relationships
+                         influence employee turnover.</li>
+                    <li><strong>Years Since Last Promotion vs. Attrition:</strong> Employees who have not been promoted
+                         for a long time are more likely to leave, pointing to the importance of career advancement
+                         opportunities in retaining employees.</li>
+                    <li><strong>Gender vs. Attrition:</strong> The analysis shows the distribution of attrition across
+                         different genders, providing insights into gender-specific attrition trends.</li>
+               </ul>
+
+               <h2 id="model-evaluation">Model Evaluation</h2>
+               <p>Various machine learning models were evaluated to predict employee attrition. The best model was
+                    identified based on its ROC AUC score, and the model was saved for future predictions.</p>
+               <h3>Model Performance:</h3>
+               <ul>
+                    <li>Logistic Regression</li>
+                    <li>Gradient Boosting</li>
+                    <li>Random Forest Classifier</li>
+                    <li>Decision Tree Classifier</li>
+                    <li>Naive Bayes</li>
+                    <li>K-Nearest Neighbors</li>
+                    <li>Support Vector Machine</li>
+               </ul>
+               <p>The models were evaluated based on accuracy, ROC AUC score, confusion matrix, and classification
+                    report. The best-performing model was identified and saved for future use.</p>
+
+               <h2 id="conclusion">Conclusion</h2>
+               <p>The analysis provides valuable insights into the factors contributing to employee attrition. Key
+                    factors such as age, years at the company, distance from home, job satisfaction, monthly income,
+                    years with the current manager, and years since the last promotion play a significant role in
+                    employee turnover. By addressing these factors, the company can develop targeted strategies to
+                    improve employee retention and reduce attrition rates.</p>
+
+               <h2 id="recommendations">Recommendations</h2>
+               <ul>
+                    <li><strong>Enhance Job Satisfaction:</strong> Implement programs to improve job satisfaction, such
+                         as recognition and reward systems, career development opportunities, and work-life balance
+                         initiatives.</li>
+                    <li><strong>Competitive Compensation:</strong> Review and adjust compensation packages to ensure
+                         they are competitive and aligned with industry standards.</li>
+                    <li><strong>Career Advancement:</strong> Provide clear career advancement paths and regular
+                         promotions to keep employees motivated and engaged.</li>
+                    <li><strong>Managerial Training:</strong> Train managers to build strong relationships with their
+                         team members and provide support and guidance.</li>
+                    <li><strong>Flexible Work Arrangements:</strong> Offer flexible work arrangements to reduce the
+                         impact of commute distance on employee retention.</li>
+               </ul>
+               <p>By implementing these recommendations, the company can create a positive work environment, enhance
+                    employee satisfaction, and ultimately reduce attrition rates.</p>
+          </div>
+     </div>
+
+     <br><br>
+     <button onclick="scrollToTop()"
+             style="position: fixed; bottom: 20px; right: 20px; background-color: #364548; color: white; padding: 10px; border: none; border-radius: 50%; cursor: pointer; font-size: 24px;">↑</button>
+     <script>
+          function scrollToTop() {
+               window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+     </script>
+     <br><br>
+
+     <footer>
+          <p>Employee Attrition Analysis Report &copy; By Kalyani B Ray</p>
+     </footer>
+</body>
+
+</html>
